@@ -31,13 +31,14 @@ routerAPI
 ;
 
 routerUI
-  .get('/', (res, req, next) => {
-    req.send('<h1>Simple express server</h1>');
+  .get('/', async (res, req) => {
+    req.send((await readFile('./index.html')).toString());
   })
 ;
 
 app
   .use(express.static('./public'))
+  .use((res, req, next) => req.status(200).set('Content-Type', 'text/html; charset=utf-8'))
   .use('/', routerUI)
   .use('/api/log', routerAPI)
   .use((res, req) => req.status(404).end('<h1 style="padding: 0 auto">Not found</h1>'))
