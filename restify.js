@@ -7,7 +7,7 @@ server.get('/', async (req, res, next) =>
   res
     .sendRaw(
         200, 
-        (await readFile('./index.html')).toString(), 
+        await readFile('./index.html'), 
         {'content-type': 'text/html'}
       ) && 
   next());

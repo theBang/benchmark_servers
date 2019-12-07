@@ -8,7 +8,7 @@ const { promises: { readFile } } = require('fs');
 // Declare a route
 fastify.get('/', async (req, res) => {
   res.header('Content-Type', 'text/html; charset=utf-8');
-  res.send((await readFile('./index.html')).toString());
+  res.send(await readFile('./index.html'));
 })
 
 // Run the server!

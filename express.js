@@ -32,7 +32,7 @@ routerAPI
 
 routerUI
   .get('/', async (res, req) => {
-    req.send((await readFile('./index.html')).toString());
+    req.send(await readFile('./index.html'));
   })
 ;
 
