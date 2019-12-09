@@ -19,10 +19,12 @@
   "homepage": "https://github.com/theBang/benchmark_servers#readme",
   "dependencies": {
     "@hapi/hapi": "^18.4.0",
+    "autocannon": "^4.4.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fastify": "^2.10.0",
     "koa": "^2.11.0",
+    "koa-logger": "^3.2.1",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "restify": "^8.5.0"
