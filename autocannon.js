@@ -13,7 +13,7 @@ console.log(title);
   const overall = [];
   for (const conn of config.connections) {
     const result = await autocannon({
-      url: 'http://localhost:3000',
+      url: 'http://localhost:8080',
       connections: conn, 
       duration: 5,
       title: title
