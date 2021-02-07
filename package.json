@@ -4,6 +4,8 @@
   "description": "Simple Node.js servers built on frameworks",
   "main": "express.js",
   "scripts": {
+    "express": "node express.js",
+    "autocannon:express": "node autocannon.js express",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
